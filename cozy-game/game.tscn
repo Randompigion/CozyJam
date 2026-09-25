@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://c4yolkpcqckex"]
+
+[ext_resource type="PackedScene" uid="uid://bt3lrtqmudjsu" path="res://player.tscn" id="1_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://dn6gcctp5ikom" path="res://icon.svg" id="2_feb5d"]
+[ext_resource type="Script" uid="uid://bjvwgfxdka525" path="res://interact_template.gd" id="3_feb5d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pc3i1"]
+radius = 219.85677
+
+[sub_resource type="LabelSettings" id="LabelSettings_pc3i1"]
+font_size = 79
+
+[node name="Game" type="Node2D" unique_id=771176163]
+
+[node name="Player" parent="." unique_id=1110818905 instance=ExtResource("1_e2o6t")]
+collision_mask = 6
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1845984997]
+position = Vector2(18, 0)
+limit_enabled = false
+position_smoothing_enabled = true
+position_smoothing_speed = 150.0
+
+[node name="interactTemplate" type="Sprite2D" parent="." unique_id=353053242]
+position = Vector2(425, 265)
+texture = ExtResource("2_feb5d")
+script = ExtResource("3_feb5d")
+
+[node name="Area2D" type="Area2D" parent="interactTemplate" unique_id=498428507]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactTemplate/Area2D" unique_id=48583590]
+shape = SubResource("CircleShape2D_pc3i1")
+
+[node name="Label" type="Label" parent="interactTemplate" unique_id=662783703]
+unique_name_in_owner = true
+visible = false
+offset_left = -25.0
+offset_top = -176.0
+offset_right = 19.0
+offset_bottom = -67.0
+text = "E"
+label_settings = SubResource("LabelSettings_pc3i1")
+
+[connection signal="body_entered" from="interactTemplate/Area2D" to="interactTemplate" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="interactTemplate/Area2D" to="interactTemplate" method="_on_area_2d_body_exited"]
