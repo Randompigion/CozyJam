@@ -4,13 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://dn6gcctp5ikom" path="res://icon.svg" id="2_1c2mv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ayxd"]
-size = Vector2(315, 130)
+size = Vector2(315, 125.931015)
 
 [node name="test level" type="Node2D" unique_id=1220711345]
 
 [node name="Player" parent="." unique_id=713240571 instance=ExtResource("1_gojnm")]
+position = Vector2(0, -707)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1732164838]
+scale = Vector2(20.85123, 20.85123)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=256370256]
 position = Vector2(102.5, 113)
@@ -18,5 +20,5 @@ scale = Vector2(2.4609375, 1)
 texture = ExtResource("2_1c2mv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1133955650]
-position = Vector2(103.5, 111)
+position = Vector2(103.5, 113.03449)
 shape = SubResource("RectangleShape2D_4ayxd")

@@ -12,10 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://csrqy5rveaqp1" path="res://Assets/Walk4.png" id="7_bwjto"]
 [ext_resource type="Texture2D" uid="uid://b6tb2mar7re72" path="res://Assets/Spin3.png" id="7_u1c27"]
 [ext_resource type="Texture2D" uid="uid://o3qsm3p1uhu5" path="res://Assets/Walk5.png" id="8_606se"]
+[ext_resource type="Texture2D" uid="uid://d08lnx6aibrqh" path="res://Assets/Spin4.png" id="8_bwjto"]
 [ext_resource type="Texture2D" uid="uid://dh5l73yqdqlyd" path="res://Assets/Walk6.png" id="9_u1c27"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ayxd"]
-size = Vector2(47, 15.5)
+size = Vector2(28.3, 11.975)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pc3i1"]
 animations = [{
@@ -47,6 +48,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_u1c27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bwjto")
 }],
 "loop": 1,
 "name": &"Spin",
@@ -77,23 +81,30 @@ animations = [{
 }]
 
 [node name="Player" type="Node2D" unique_id=713240571]
+z_index = 999
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1128499092]
 script = ExtResource("1_onrkg")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=2109418766]
-zoom = Vector2(0.2, 0.2)
+zoom = Vector2(0.4, 0.4)
 position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_horizontal_offset = 1.0
+drag_left_margin = 0.1
+drag_top_margin = 0.1
+drag_right_margin = 0.1
+drag_bottom_margin = 0.1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1871370629]
-position = Vector2(10.5, 19.75)
+position = Vector2(10.5, 2.125)
 scale = Vector2(10, 10)
 shape = SubResource("RectangleShape2D_4ayxd")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/CollisionShape2D" unique_id=771803819]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=771803819]
 unique_name_in_owner = true
-position = Vector2(0.5, -0.75)
-scale = Vector2(0.08524582, 0.0852459)
+position = Vector2(15.5, 12.25)
+scale = Vector2(0.5716913, 0.58852464)
 sprite_frames = SubResource("SpriteFrames_pc3i1")
-animation = &"JumpStart"
-frame_progress = 1.0
+animation = &"Walk"
+frame_progress = 0.58212376
