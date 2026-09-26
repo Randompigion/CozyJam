@@ -1,11 +1,11 @@
 [gd_scene format=4 uid="uid://c4yolkpcqckex"]
 
-[ext_resource type="PackedScene" uid="uid://bt3lrtqmudjsu" path="res://player.tscn" id="1_e2o6t"]
-[ext_resource type="Texture2D" uid="uid://dn6gcctp5ikom" path="res://icon.svg" id="2_feb5d"]
-[ext_resource type="Script" uid="uid://bjvwgfxdka525" path="res://interact_template.gd" id="3_feb5d"]
+[ext_resource type="Texture2D" uid="uid://dn6gcctp5ikom" path="res://icon.svg" id="2_pl5tl"]
+[ext_resource type="Script" uid="uid://bjvwgfxdka525" path="res://interact_template.gd" id="3_rpvmb"]
+[ext_resource type="PackedScene" uid="uid://bt3lrtqmudjsu" path="res://player.tscn" id="4_3xr6s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_feb5d"]
-texture = ExtResource("2_feb5d")
+texture = ExtResource("2_pl5tl")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
@@ -400,7 +400,7 @@ radius = 219.85677
 [sub_resource type="LabelSettings" id="LabelSettings_pc3i1"]
 font_size = 79
 
-[node name="Game" type="Node2D" unique_id=771176163]
+[node name="Roots" type="Node2D" unique_id=771176163]
 
 [node name="Map" type="Node2D" parent="." unique_id=1930901445]
 
@@ -410,16 +410,16 @@ tile_set = SubResource("TileSet_feb5d")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Map/TileMapLayer" unique_id=206122161]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/TileMapLayer/StaticBody2D" unique_id=915237197]
-polygon = PackedVector2Array(-380, 98, -94, 98, -95, 63, -49, 63, -49, 51, 160, 48, 161, -17, 335, -16, 336, -63, 624, -63, 623, -175, 636, -174, 647, 90, -424, 141, -426, -5, -388, 59)
-
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/TileMapLayer/StaticBody2D" unique_id=518679920]
 polygon = PackedVector2Array(-384, 62, -256, 64, -255, 18, -174, 19, -174, -48, -112, -46, -111, -65, 95, -62, 99, -114, 243, -114, 243, -177, 626, -175, 624, -220, 40, -244, -386, 58, -390, 64)
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/TileMapLayer/StaticBody2D" unique_id=915237197]
+polygon = PackedVector2Array(-380, 98, -94, 98, -95, 63, -49, 63, -49, 51, 160, 48, 161, -17, 335, -16, 336, -63, 624, -63, 623, -175, 636, -174, 647, 90, -424, 141, -426, -5, -388, 59)
+
 [node name="interactTemplate" type="Sprite2D" parent="." unique_id=353053242]
 position = Vector2(172, 376)
-texture = ExtResource("2_feb5d")
-script = ExtResource("3_feb5d")
+texture = ExtResource("2_pl5tl")
+script = ExtResource("3_rpvmb")
 
 [node name="Area2D" type="Area2D" parent="interactTemplate" unique_id=498428507]
 collision_layer = 2
@@ -438,7 +438,7 @@ offset_bottom = -67.0
 text = "E"
 label_settings = SubResource("LabelSettings_pc3i1")
 
-[node name="Player" parent="." unique_id=713240571 instance=ExtResource("1_e2o6t")]
+[node name="Player" parent="." unique_id=713240571 instance=ExtResource("4_3xr6s")]
 
 [connection signal="body_entered" from="interactTemplate/Area2D" to="interactTemplate" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="interactTemplate/Area2D" to="interactTemplate" method="_on_area_2d_body_exited"]

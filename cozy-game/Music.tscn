@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dniu48sefag2i"]
+
+[ext_resource type="AudioStream" uid="uid://djtqqyvbvwg4o" path="res://cozy jam main .mp3" id="1_fw6bl"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=1850651547]
+stream = ExtResource("1_fw6bl")
+autoplay = true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djtqqyvbvwg4o"
+path="res://.godot/imported/cozy jam main .mp3-17b5f251897f57203ed0e4998201147c.mp3str"
+
+[deps]
+
+source_file="res://cozy jam main .mp3"
+dest_files=["res://.godot/imported/cozy jam main .mp3-17b5f251897f57203ed0e4998201147c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

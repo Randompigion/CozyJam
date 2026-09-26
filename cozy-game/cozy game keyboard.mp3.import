@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://sfngh0ri3175"
+path="res://.godot/imported/cozy game keyboard.mp3-f5f4e22a9c7af3661533e23c2fc2ccab.mp3str"
+
+[deps]
+
+source_file="res://cozy game keyboard.mp3"
+dest_files=["res://.godot/imported/cozy game keyboard.mp3-f5f4e22a9c7af3661533e23c2fc2ccab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
