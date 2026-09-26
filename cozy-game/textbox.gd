@@ -3,11 +3,8 @@ var timerwork = false
 var textspeed = 60.0
 var line_durations : Array = []
 var line_elapsed = 0.0
-#var sprite_location = "left"
-#I planned to make it so the sprite would move based on who's talking, but didn't code it.
 var dialogue_text : Array = []
 var dialogue_speaker : Array = []
-var dialogue_sprite : Array = []
 var dialogue_index = 0
 var progress = 0.0
 var auto_advance = false
@@ -16,28 +13,22 @@ signal pause
 signal finished
 var canwork = false
 
-func _ready() -> void:
-	$TextCamera.make_current()
-
 #Whenever you want to start a dialouge, you need to give it these parameters. Its explained in DialougeTestZone.tscn
-func newDialouge(Text,Speaker,Sprite):
+func newDialouge(Text,Speaker):
 	dialogue_text = (Text)
 	dialogue_speaker =  (Speaker)
-	dialogue_sprite =  (Sprite)
 	dialogue_index = 0
 	progress = 0.0
 	showline()
 
 #Subtitles for one voice line. Several strings share the clip, split by how long each one is.
-func newVoiceline(Lines,Speaker,Sprite,duration):
+func newVoiceline(Lines,Speaker,duration):
 	var speakers = []
-	var sprites = []
 	for i in Lines.size():
 		speakers.append(Speaker)
-		sprites.append(Sprite)
 	line_durations = _split_duration(Lines, duration)
 	line_elapsed = 0.0
-	newDialouge(Lines,speakers,sprites)
+	newDialouge(Lines,speakers)
 	auto_advance = true
 
 
@@ -58,9 +49,6 @@ func showline():
 	var speaker = get_node("%Name")
 	if speaker:
 		speaker.text = dialogue_speaker[dialogue_index]
-	var portrait = get_node("%CharSprites")
-	if portrait:
-		portrait.animation = dialogue_sprite[dialogue_index]
 	visible_ratio = 0
 
 #How long the whole line takes to type out
@@ -107,7 +95,6 @@ func _process(delta: float) -> void:
 	else:
 		text = ""
 		%Name.text = ""
-		%CharSprites.animation = "Null"
 		visible_ratio = 0
 		queue_free()
 
