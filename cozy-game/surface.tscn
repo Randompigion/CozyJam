@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://b8pp1lpolyv3v"]
-
-[ext_resource type="Texture2D" uid="uid://d1i3sv2f5xwuu" path="res://Sky.png" id="1_tap8s"]
-
-[node name="Surface" type="Node2D" unique_id=1915197495]
-
-[node name="Sky" type="Sprite2D" parent="." unique_id=1995880081]
-position = Vector2(1412, 663)
-texture = ExtResource("1_tap8s")
