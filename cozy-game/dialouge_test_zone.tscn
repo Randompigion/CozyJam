@@ -1,6 +1,17 @@
 [gd_scene format=3 uid="uid://wycvqu43wlr1"]
 
 [ext_resource type="Script" uid="uid://cq6gw65oop2q3" path="res://dialouge_test_zone.gd" id="1_x3s54"]
+[ext_resource type="PackedScene" uid="uid://ban8en5wpbirx" path="res://textbox.tscn" id="2_c6bcw"]
 
 [node name="DialougeTestZone" type="Node2D" unique_id=208434497]
 script = ExtResource("1_x3s54")
+
+[node name="Textbox" parent="." unique_id=1849238152 instance=ExtResource("2_c6bcw")]
+offset_left = -646.5
+offset_top = 17.0
+offset_right = 513.5
+offset_bottom = 329.5
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2057286209]
+
+[connection signal="finished" from="Textbox" to="." method="_on_textbox_finished"]
