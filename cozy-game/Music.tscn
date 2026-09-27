@@ -4,4 +4,6 @@
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=1850651547]
 stream = ExtResource("1_fw6bl")
+volume_db = -9.145
 autoplay = true
+parameters/looping = true

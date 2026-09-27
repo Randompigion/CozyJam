@@ -87,7 +87,7 @@ z_index = 999
 script = ExtResource("1_onrkg")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=2109418766]
-zoom = Vector2(0.4, 0.4)
+zoom = Vector2(0.3, 0.3)
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_horizontal_offset = 1.0
@@ -103,8 +103,7 @@ shape = SubResource("RectangleShape2D_4ayxd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=771803819]
 unique_name_in_owner = true
-position = Vector2(15.5, 12.25)
+position = Vector2(11.000001, -14)
 scale = Vector2(0.5716913, 0.58852464)
 sprite_frames = SubResource("SpriteFrames_pc3i1")
-animation = &"Walk"
-frame_progress = 0.58212376
+animation = &"Idle"

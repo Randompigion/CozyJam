@@ -10,8 +10,8 @@ var textbox_exists = false
 func _ready() -> void:
 	var textbox = textboxlocation.instantiate()
 	textbox.finished.connect(_on_textbox_finished)
-	dialogue_text =  ["Sample Text", "I hope this works", "next"]
-	dialogue_speaker =  ["Roach", "Roach", "null"]
+	dialogue_text =  ["You found all of my children!", "Thank you very much kind sir!", "You are welcome into my home anytime..."]
+	dialogue_speaker =  ["Mother Bug", "Mother Bug", "Mother Bug"]
 	textbox.newDialouge(dialogue_text,dialogue_speaker)
 	add_child(textbox)
 	start.emit()
