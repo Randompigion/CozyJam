@@ -3,11 +3,8 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 # func _ready() -> void:
 
-func _on_baby_body_entered(body: Node2D) -> void:
-	Global.children += 1
-	$Player/CharacterBody2D/collected.text = str(Global.children) + "/6 Children Collected"
-	$Timer.start()
-	
+# deleted baby 1 part for convenience
+
 func _on_baby_2_body_entered(body: Node2D) -> void:
 	Global.children += 1
 	$Player/CharacterBody2D/collected.text = str(Global.children) + "/6 Children Collected"
