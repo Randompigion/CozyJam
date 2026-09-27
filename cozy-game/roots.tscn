@@ -31,6 +31,8 @@
 [ext_resource type="Texture2D" uid="uid://bvytw13n67q10" path="res://Boulder.png" id="20_hc8u7"]
 [ext_resource type="Texture2D" uid="uid://o3qsm3p1uhu5" path="res://Assets/Walk5.png" id="20_sktj5"]
 [ext_resource type="Texture2D" uid="uid://dh5l73yqdqlyd" path="res://Assets/Walk6.png" id="21_8fsv5"]
+[ext_resource type="Texture2D" uid="uid://bxtfo012k0fop" path="res://Assets/plushie.png" id="23_x6uth"]
+[ext_resource type="Script" uid="uid://daci8xpg5o7y0" path="res://plushie.gd" id="24_gj7nr"]
 [ext_resource type="Texture2D" uid="uid://bjoujmt86usnr" path="res://Assets/pumpkin_seeds.png" id="30_7e0xe"]
 [ext_resource type="Script" uid="uid://61k1825aojhb" path="res://pumpkin_seeds.gd" id="30_vnr4y"]
 
@@ -112,8 +114,11 @@ animations = [{
 font = ExtResource("12_x2jg2")
 font_size = 159
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vnr4y"]
-size = Vector2(455, 202)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7w5kx"]
+size = Vector2(27.80011, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3b47u"]
+radius = 213.00938
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_thv5f"]
 size = Vector2(274, 189.5)
@@ -234,6 +239,26 @@ theme_override_font_sizes/font_size = 20
 label_settings = SubResource("LabelSettings_4fg7c")
 horizontal_alignment = 1
 
+[node name="Plushie" type="Sprite2D" parent="." unique_id=1567800262]
+position = Vector2(14683.001, -8381.001)
+scale = Vector2(15, 15)
+texture = ExtResource("23_x6uth")
+script = ExtResource("24_gj7nr")
+
+[node name="Area2D" type="Area2D" parent="Plushie" unique_id=668117269]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plushie/Area2D" unique_id=1586010049]
+position = Vector2(-1.166565, 0)
+shape = SubResource("RectangleShape2D_7w5kx")
+
+[node name="Label" type="Label" parent="Plushie" unique_id=930867922]
+offset_left = -48.066734
+offset_top = -23.799936
+offset_right = 64.933266
+offset_bottom = -0.7999363
+theme_override_fonts/font = ExtResource("12_x2jg2")
+text = "press e to pick up"
+
 [node name="Baby" type="Area2D" parent="." unique_id=327411944]
 collision_layer = 2
 script = ExtResource("11_x2jg2")
@@ -248,6 +273,25 @@ position = Vector2(-47.999992, 24.999998)
 scale = Vector2(0.41600016, 0.41600013)
 texture = ExtResource("11_62jhw")
 flip_h = true
+
+[node name="Label" type="Label" parent="Baby" unique_id=961771824]
+offset_left = 11637.0
+offset_top = 1642.0
+offset_right = 12759.0
+offset_bottom = 2035.0
+theme_override_fonts/font = ExtResource("12_x2jg2")
+theme_override_font_sizes/font_size = 80
+text = "I hid my plushie somewhere. i'll go with you if you can find it."
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="Baby" unique_id=2054364512]
+offset_left = 11629.0
+offset_top = 1900.0
+offset_right = 12263.0
+offset_bottom = 1961.0
+theme_override_fonts/font = ExtResource("12_x2jg2")
+theme_override_font_sizes/font_size = 63
+text = "press e to return plushie"
 
 [node name="Baby2" type="Area2D" parent="." unique_id=169946616]
 position = Vector2(-9016, -4616)
@@ -350,18 +394,19 @@ scale = Vector2(2, 2)
 texture = ExtResource("11_62jhw")
 
 [node name="Label" type="Label" parent="LargeBaby6" unique_id=1363882788]
-offset_left = 20835.967
-offset_top = 18985.088
-offset_right = 23007.967
-offset_bottom = 19139.088
+offset_left = 20992.105
+offset_top = 19176.316
+offset_right = 23164.105
+offset_bottom = 19330.316
 text = "Hungry... need some pumpkin seeds"
 label_settings = SubResource("LabelSettings_4fg7c")
+horizontal_alignment = 2
 
 [node name="Label2" type="Label" parent="LargeBaby6" unique_id=245554859]
-offset_left = 21554.387
-offset_top = 18799.123
-offset_right = 23726.387
-offset_bottom = 18953.123
+offset_left = 21735.088
+offset_top = 19000.0
+offset_right = 23907.088
+offset_bottom = 19154.0
 text = "press e to feed"
 label_settings = SubResource("LabelSettings_4fg7c")
 
@@ -434,8 +479,10 @@ label_settings = SubResource("LabelSettings_hc8u7")
 
 [node name="Timer" type="Timer" parent="." unique_id=1180803300]
 
-[connection signal="body_entered" from="Baby" to="." method="_on_baby_body_entered"]
+[connection signal="body_entered" from="Plushie/Area2D" to="Plushie" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Plushie/Area2D" to="Plushie" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Baby" to="Baby" method="_on_body_entered"]
+[connection signal="body_exited" from="Baby" to="Baby" method="_on_body_exited"]
 [connection signal="body_entered" from="Baby2" to="." method="_on_baby_2_body_entered"]
 [connection signal="body_entered" from="Baby2" to="Baby2" method="_on_body_entered"]
 [connection signal="body_entered" from="Baby3" to="." method="_on_baby_3_body_entered"]
@@ -446,7 +493,6 @@ label_settings = SubResource("LabelSettings_hc8u7")
 [connection signal="body_entered" from="LargeBaby5" to="LargeBaby5" method="_on_body_entered"]
 [connection signal="body_entered" from="PumpkinSeeds/Area2D" to="PumpkinSeeds" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="PumpkinSeeds/Area2D" to="PumpkinSeeds" method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="LargeBaby6" to="." method="_on_large_baby_6_body_entered"]
 [connection signal="body_entered" from="LargeBaby6" to="LargeBaby6" method="_on_body_entered"]
 [connection signal="body_exited" from="LargeBaby6" to="LargeBaby6" method="_on_body_exited"]
 [connection signal="body_entered" from="Winbox" to="." method="_on_winbox_body_entered"]
