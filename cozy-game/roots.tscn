@@ -34,6 +34,8 @@
 [ext_resource type="Texture2D" uid="uid://bvytw13n67q10" path="res://Boulder.png" id="20_hc8u7"]
 [ext_resource type="Texture2D" uid="uid://o3qsm3p1uhu5" path="res://Assets/Walk5.png" id="20_sktj5"]
 [ext_resource type="Texture2D" uid="uid://dh5l73yqdqlyd" path="res://Assets/Walk6.png" id="21_8fsv5"]
+[ext_resource type="Texture2D" uid="uid://bjoujmt86usnr" path="res://Assets/pumpkin_seeds.png" id="30_7e0xe"]
+[ext_resource type="Script" uid="uid://61k1825aojhb" path="res://pumpkin_seeds.gd" id="30_vnr4y"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4ayxd"]
 particle_flag_disable_z = true
@@ -513,6 +515,9 @@ size = Vector2(274, 189.5)
 [sub_resource type="CircleShape2D" id="CircleShape2D_jsvk1"]
 radius = 528.2424
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7e0xe"]
+size = Vector2(31.432709, 20)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pc3i1"]
 size = Vector2(1862, 777)
 
@@ -617,13 +622,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -3360.0
-offset_top = -509.255
-offset_right = 3360.0
-offset_bottom = 210.745
+offset_left = -3362.0
+offset_top = -509.99915
+offset_right = 3358.0
+offset_bottom = 210.00085
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
 label_settings = SubResource("LabelSettings_4fg7c")
 horizontal_alignment = 1
 
@@ -711,6 +717,27 @@ offset_bottom = 1418.0
 text = "I'm hungry"
 label_settings = SubResource("LabelSettings_4fg7c")
 
+[node name="PumpkinSeeds" type="Sprite2D" parent="." unique_id=2069183826]
+position = Vector2(10429.996, -4372)
+scale = Vector2(13.68, 13.68)
+texture = ExtResource("30_7e0xe")
+script = ExtResource("30_vnr4y")
+
+[node name="Label" type="Label" parent="PumpkinSeeds" unique_id=548781880]
+offset_left = -25.730766
+offset_top = -18.88889
+offset_right = 87.26923
+offset_bottom = 4.1111107
+theme_override_fonts/font = ExtResource("12_x2jg2")
+text = "Press e to pick up"
+
+[node name="Area2D" type="Area2D" parent="PumpkinSeeds" unique_id=104506060]
+scale = Vector2(1.6549708, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PumpkinSeeds/Area2D" unique_id=679173372]
+position = Vector2(0.00030517578, 7.9678345)
+shape = SubResource("RectangleShape2D_7e0xe")
+
 [node name="LargeBaby6" type="Area2D" parent="." unique_id=1254098360]
 position = Vector2(-28800, -22336)
 scale = Vector2(1.14, 1.14)
@@ -726,6 +753,22 @@ debug_color = Color(0.9504402, 0.9313754, 0.93184054, 0.41960785)
 position = Vector2(21.929722, 89.47366)
 scale = Vector2(2, 2)
 texture = ExtResource("11_62jhw")
+
+[node name="Label" type="Label" parent="LargeBaby6" unique_id=1363882788]
+offset_left = 20835.967
+offset_top = 18985.088
+offset_right = 23007.967
+offset_bottom = 19139.088
+text = "Hungry... need some pumpkin seeds"
+label_settings = SubResource("LabelSettings_4fg7c")
+
+[node name="Label2" type="Label" parent="LargeBaby6" unique_id=245554859]
+offset_left = 21554.387
+offset_top = 18799.123
+offset_right = 23726.387
+offset_bottom = 18953.123
+text = "press e to feed"
+label_settings = SubResource("LabelSettings_4fg7c")
 
 [node name="Father" type="Sprite2D" parent="." unique_id=1511745169]
 position = Vector2(-8976, -8502.001)
@@ -757,7 +800,7 @@ label_settings = SubResource("LabelSettings_4fg7c")
 
 [node name="BlackGradient" type="Sprite2D" parent="." unique_id=744928701]
 modulate = Color(1, 1, 1, 0.8117647)
-position = Vector2(4367, -1210)
+position = Vector2(4644, -1297)
 scale = Vector2(38.90988, 11.328507)
 texture = ExtResource("14_x2jg2")
 
@@ -805,7 +848,10 @@ label_settings = SubResource("LabelSettings_hc8u7")
 [connection signal="body_entered" from="Baby4" to="Baby4" method="_on_body_entered"]
 [connection signal="body_entered" from="LargeBaby5" to="." method="_on_large_baby_5_body_entered"]
 [connection signal="body_entered" from="LargeBaby5" to="LargeBaby5" method="_on_body_entered"]
+[connection signal="body_entered" from="PumpkinSeeds/Area2D" to="PumpkinSeeds" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="PumpkinSeeds/Area2D" to="PumpkinSeeds" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="LargeBaby6" to="." method="_on_large_baby_6_body_entered"]
 [connection signal="body_entered" from="LargeBaby6" to="LargeBaby6" method="_on_body_entered"]
+[connection signal="body_exited" from="LargeBaby6" to="LargeBaby6" method="_on_body_exited"]
 [connection signal="body_entered" from="Winbox" to="." method="_on_winbox_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
