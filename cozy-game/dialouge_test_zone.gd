@@ -10,12 +10,12 @@ var textbox_exists = false
 func _ready() -> void:
 	var textbox = textboxlocation.instantiate()
 	textbox.finished.connect(_on_textbox_finished)
-	dialogue_text =  ["You found all of my children!", "Thank you very much kind sir!", "You are welcome into my home anytime..."]
+	dialogue_text =  ["You found all of my children!", "Thank you very much kind sir!", "You've returned them to their roots..."]
 	dialogue_speaker =  ["Mother Bug", "Mother Bug", "Mother Bug"]
 	textbox.newDialouge(dialogue_text,dialogue_speaker)
 	add_child(textbox)
 	start.emit()
 
 func _on_textbox_finished() -> void:
-	pass
+	get_tree().change_scene_to_file("res://main_menu.tscn")
 	#This should be deleted but i dont have much time -randompigion

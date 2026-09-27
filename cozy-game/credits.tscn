@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bwpnjimcycbml"]
+
+[ext_resource type="Script" uid="uid://cc7mmyecmc6x1" path="res://credits.gd" id="1_g4wvt"]
+[ext_resource type="Texture2D" uid="uid://bilv78dcm68tp" path="res://Credits.png" id="1_nm7lk"]
+[ext_resource type="FontFile" uid="uid://bulsvny5kgee1" path="res://augiepixel.ttf" id="2_c1t8d"]
+
+[node name="Credits" type="Control" unique_id=1112350128]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g4wvt")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1491792937]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1132.0
+offset_top = -678.0
+offset_right = 1186.0
+offset_bottom = 651.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nm7lk")
+
+[node name="Button" type="Button" parent="TextureRect" unique_id=1665764700]
+layout_mode = 0
+offset_left = 1856.0
+offset_top = 20.0
+offset_right = 2285.0
+offset_bottom = 86.0
+theme_override_fonts/font = ExtResource("2_c1t8d")
+theme_override_font_sizes/font_size = 59
+text = "TO MAIN MENU -->"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1622817588]
+position = Vector2(605, 299)
+zoom = Vector2(0.5, 0.5)
+
+[connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]
