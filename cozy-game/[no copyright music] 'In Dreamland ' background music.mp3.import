@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4g3icnwadinn"
+path="res://.godot/imported/[no copyright music] 'In Dreamland ' background music.mp3-316668796014d791b00fc2363f0517eb.mp3str"
+
+[deps]
+
+source_file="res://[no copyright music] 'In Dreamland ' background music.mp3"
+dest_files=["res://.godot/imported/[no copyright music] 'In Dreamland ' background music.mp3-316668796014d791b00fc2363f0517eb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
