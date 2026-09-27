@@ -17,5 +17,5 @@ func _ready() -> void:
 	start.emit()
 
 func _on_textbox_finished() -> void:
-	get_tree().change_scene_to_file("res://main_menu.tscn")
+	$Credits.visible = true
 	#This should be deleted but i dont have much time -randompigion
