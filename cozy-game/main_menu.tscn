@@ -10,6 +10,13 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gj7nr"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_4ayxd"]
+font = ExtResource("3_fu7sn")
+font_size = 225
+shadow_size = 88
+shadow_color = Color(0.1882353, 0.105882354, 0.011764706, 1)
+shadow_offset = Vector2(10.135, 2.385)
+
 [node name="Main Menu" type="Control" unique_id=455273219]
 layout_mode = 3
 anchors_preset = 15
@@ -43,13 +50,17 @@ texture = ExtResource("2_7vrkn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1984171513]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 7
 anchor_left = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
+anchor_bottom = 1.0
 offset_left = -220.0
+offset_top = -484.0
 offset_right = 220.0
-offset_bottom = 391.0
+offset_bottom = -44.0
 grow_horizontal = 2
+grow_vertical = 0
 
 [node name="Play" type="Button" parent="VBoxContainer" unique_id=1884764410]
 layout_mode = 2
@@ -77,6 +88,19 @@ theme_override_fonts/font = ExtResource("3_fu7sn")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxTexture_gj7nr")
 text = "Quit"
+
+[node name="Label" type="Label" parent="." unique_id=323736906]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -704.5
+offset_top = -53.0
+offset_right = 704.5
+offset_bottom = 163.0
+grow_horizontal = 2
+text = "Beetle's Burrow"
+label_settings = SubResource("LabelSettings_4ayxd")
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]

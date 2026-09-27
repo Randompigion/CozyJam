@@ -519,7 +519,6 @@ offset_bottom = 1417.0
 label_settings = SubResource("LabelSettings_4fg7c")
 
 [node name="BlackGradient" type="Sprite2D" parent="." unique_id=744928701]
-visible = false
 modulate = Color(1, 1, 1, 0.8117647)
 position = Vector2(4644.0005, -1632)
 scale = Vector2(38.90988, 11.328507)
