@@ -4,6 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://criv6m00cvpi" path="res://MainMenu.png" id="2_7vrkn"]
 [ext_resource type="FontFile" uid="uid://bulsvny5kgee1" path="res://augiepixel.ttf" id="3_fu7sn"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vnr4y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x6uth"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gj7nr"]
+
 [node name="Main Menu" type="Control" unique_id=455273219]
 layout_mode = 3
 anchors_preset = 15
@@ -47,21 +53,29 @@ grow_horizontal = 2
 
 [node name="Play" type="Button" parent="VBoxContainer" unique_id=1884764410]
 layout_mode = 2
+theme_override_constants/outline_size = 67
 theme_override_fonts/font = ExtResource("3_fu7sn")
 theme_override_font_sizes/font_size = 200
+theme_override_styles/normal = SubResource("StyleBoxTexture_vnr4y")
 text = "Play"
 
 [node name="Credits" type="Button" parent="VBoxContainer" unique_id=644824319]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 67
 theme_override_fonts/font = ExtResource("3_fu7sn")
 theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = SubResource("StyleBoxTexture_x6uth")
 text = "Credits
 "
 
 [node name="Quit" type="Button" parent="VBoxContainer" unique_id=1516719091]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 67
 theme_override_fonts/font = ExtResource("3_fu7sn")
 theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxTexture_gj7nr")
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]

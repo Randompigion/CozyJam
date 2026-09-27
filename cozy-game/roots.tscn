@@ -115,7 +115,7 @@ font = ExtResource("12_x2jg2")
 font_size = 159
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7w5kx"]
-size = Vector2(27.80011, 20)
+size = Vector2(27.80011, 37.7334)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vnr4y"]
 size = Vector2(455, 202)
@@ -248,7 +248,7 @@ script = ExtResource("24_gj7nr")
 [node name="Area2D" type="Area2D" parent="Plushie" unique_id=668117269]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plushie/Area2D" unique_id=1586010049]
-position = Vector2(-1.166565, 0)
+position = Vector2(-1.1664429, 8.866699)
 shape = SubResource("RectangleShape2D_7w5kx")
 
 [node name="Label" type="Label" parent="Plushie" unique_id=930867922]

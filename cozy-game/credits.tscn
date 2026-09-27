@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bilv78dcm68tp" path="res://Credits.png" id="1_nm7lk"]
 [ext_resource type="FontFile" uid="uid://bulsvny5kgee1" path="res://augiepixel.ttf" id="2_c1t8d"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fu7sn"]
+
 [node name="Credits" type="Control" unique_id=1112350128]
 layout_mode = 3
 anchors_preset = 15
@@ -34,8 +36,11 @@ offset_left = 1856.0
 offset_top = 20.0
 offset_right = 2285.0
 offset_bottom = 86.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 67
 theme_override_fonts/font = ExtResource("2_c1t8d")
 theme_override_font_sizes/font_size = 59
+theme_override_styles/normal = SubResource("StyleBoxTexture_fu7sn")
 text = "TO MAIN MENU -->"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1622817588]
