@@ -22,7 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://cq4r3byl70kcw" path="res://Assets/Gradient.png" id="14_x2jg2"]
 [ext_resource type="Texture2D" uid="uid://d08lnx6aibrqh" path="res://Assets/Spin4.png" id="15_k2iu6"]
 [ext_resource type="Texture2D" uid="uid://gcvg2kxs8q8n" path="res://Assets/Walk1.png" id="16_281sn"]
-[ext_resource type="Texture2D" uid="uid://cx6jmlflg4473" path="res://Father.png" id="16_433cr"]
 [ext_resource type="Script" uid="uid://dybe5qipasv23" path="res://large_baby_6.gd" id="16_imvy7"]
 [ext_resource type="Texture2D" uid="uid://dme6y72wt8msj" path="res://pumpkin.png" id="17_4vwy3"]
 [ext_resource type="Texture2D" uid="uid://dreccygdp8wup" path="res://Assets/Walk2.png" id="17_ievvy"]
@@ -35,6 +34,7 @@
 [ext_resource type="Script" uid="uid://daci8xpg5o7y0" path="res://plushie.gd" id="24_gj7nr"]
 [ext_resource type="Texture2D" uid="uid://bjoujmt86usnr" path="res://Assets/pumpkin_seeds.png" id="30_7e0xe"]
 [ext_resource type="Script" uid="uid://61k1825aojhb" path="res://pumpkin_seeds.gd" id="30_vnr4y"]
+[ext_resource type="Texture2D" uid="uid://xudhw6iqh152" path="res://NewMommaBeetle.png" id="32_vnr4y"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4ayxd"]
 particle_flag_disable_z = true
@@ -114,11 +114,11 @@ animations = [{
 font = ExtResource("12_x2jg2")
 font_size = 159
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vnr4y"]
-size = Vector2(455, 202)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7w5kx"]
 size = Vector2(27.80011, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vnr4y"]
+size = Vector2(455, 202)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_thv5f"]
 size = Vector2(274, 189.5)
@@ -411,15 +411,15 @@ text = "press e to feed"
 label_settings = SubResource("LabelSettings_4fg7c")
 
 [node name="Father" type="Sprite2D" parent="." unique_id=1511745169]
-position = Vector2(-8976, -8502.001)
-scale = Vector2(0.4617, 0.4617)
-texture = ExtResource("16_433cr")
+position = Vector2(-8875, -8457)
+scale = Vector2(1.952, 1.952)
+texture = ExtResource("32_vnr4y")
 flip_h = true
 
 [node name="Father2" type="Sprite2D" parent="." unique_id=538100833]
-position = Vector2(3168.0002, -16926)
-scale = Vector2(0.462, 0.462)
-texture = ExtResource("16_433cr")
+position = Vector2(3055.0002, -16810)
+scale = Vector2(1.437, 1.437)
+texture = ExtResource("32_vnr4y")
 flip_h = true
 
 [node name="Winbox" type="Area2D" parent="." unique_id=847344182]
@@ -439,7 +439,6 @@ offset_bottom = -176.0
 label_settings = SubResource("LabelSettings_4fg7c")
 
 [node name="BlackGradient" type="Sprite2D" parent="." unique_id=744928701]
-visible = false
 modulate = Color(1, 1, 1, 0.8117647)
 position = Vector2(4644.0005, -1632)
 scale = Vector2(38.90988, 11.328507)

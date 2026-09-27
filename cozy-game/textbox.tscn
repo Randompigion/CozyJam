@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://bulsvny5kgee1" path="res://augiepixel.ttf" id="1_4fg7c"]
 [ext_resource type="Script" uid="uid://sdwnoafto8un" path="res://textbox.gd" id="1_vng66"]
 [ext_resource type="Texture2D" uid="uid://bm66qcqj4xngb" path="res://Assets/Textbox.png" id="2_ptcjm"]
+[ext_resource type="Texture2D" uid="uid://xudhw6iqh152" path="res://NewMommaBeetle.png" id="3_3pwef"]
 [ext_resource type="Texture2D" uid="uid://dpsaw2to3jpc6" path="res://treetop.png" id="3_88vyv"]
 [ext_resource type="Texture2D" uid="uid://cflx8hmapo5u6" path="res://Assets/BabyBeetle.png" id="3_b4wmp"]
 
@@ -53,6 +54,12 @@ offset_bottom = 316.5
 theme_override_colors/font_color = Color(0, 0.99215686, 0.38039216, 1)
 text = "'e' next -->"
 label_settings = SubResource("LabelSettings_88vyv")
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=864997114]
+position = Vector2(1407.635, 38.169983)
+scale = Vector2(0.831783, 0.7622739)
+texture = ExtResource("3_3pwef")
+flip_h = true
 
 [node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1476730121]
 position = Vector2(1508, -48.49997)
@@ -114,8 +121,8 @@ texture = ExtResource("3_b4wmp")
 flip_h = true
 
 [node name="Sprite2D6" type="Sprite2D" parent="." unique_id=2066071017]
-position = Vector2(1359.96, -62.07)
-rotation = 0.12042772
+position = Vector2(1359.96, -123.6)
+rotation = -0.1850049
 scale = Vector2(0.22, 0.22)
 texture = ExtResource("3_b4wmp")
 flip_h = true
