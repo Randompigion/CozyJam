@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cc7mmyecmc6x1" path="res://credits.gd" id="1_g4wvt"]
 [ext_resource type="Texture2D" uid="uid://bilv78dcm68tp" path="res://Credits.png" id="1_nm7lk"]
 [ext_resource type="FontFile" uid="uid://bulsvny5kgee1" path="res://augiepixel.ttf" id="2_c1t8d"]
+[ext_resource type="AudioStream" uid="uid://dw2bpv8ds3hy1" path="res://Assets/Key Click.ogg" id="4_pjc1l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fu7sn"]
 
@@ -46,5 +47,9 @@ text = "TO MAIN MENU -->"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1622817588]
 position = Vector2(605, 299)
 zoom = Vector2(0.5, 0.5)
+
+[node name="KeyClick" type="AudioStreamPlayer" parent="." unique_id=1641582219]
+stream = ExtResource("4_pjc1l")
+autoplay = true
 
 [connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]

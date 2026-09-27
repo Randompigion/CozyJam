@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://co1rsb588en3b" path="res://main_menu.gd" id="1_06t4h"]
 [ext_resource type="Texture2D" uid="uid://criv6m00cvpi" path="res://MainMenu.png" id="2_7vrkn"]
 [ext_resource type="FontFile" uid="uid://bulsvny5kgee1" path="res://augiepixel.ttf" id="3_fu7sn"]
+[ext_resource type="AudioStream" uid="uid://dw2bpv8ds3hy1" path="res://Assets/Key Click.ogg" id="4_jix8l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vnr4y"]
 
@@ -102,6 +103,11 @@ grow_horizontal = 2
 text = "Beetle's Burrow"
 label_settings = SubResource("LabelSettings_4ayxd")
 
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=1897942264]
+unique_name_in_owner = true
+stream = ExtResource("4_jix8l")
+
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="finished" from="Click" to="." method="_on_click_finished"]

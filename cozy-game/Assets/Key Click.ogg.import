@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dw2bpv8ds3hy1"
+path="res://.godot/imported/Key Click.ogg-0edb4b290cb74ea621e8c25d9bc46b76.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Key Click.ogg"
+dest_files=["res://.godot/imported/Key Click.ogg-0edb4b290cb74ea621e8c25d9bc46b76.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

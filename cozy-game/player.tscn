@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://o3qsm3p1uhu5" path="res://Assets/Walk5.png" id="8_606se"]
 [ext_resource type="Texture2D" uid="uid://d08lnx6aibrqh" path="res://Assets/Spin4.png" id="8_bwjto"]
 [ext_resource type="Texture2D" uid="uid://dh5l73yqdqlyd" path="res://Assets/Walk6.png" id="9_u1c27"]
+[ext_resource type="AudioStream" uid="uid://2lvif23h73mr" path="res://Assets/Step.ogg" id="15_606se"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ayxd"]
 size = Vector2(28.3, 11.975)
@@ -107,3 +108,7 @@ position = Vector2(11.000001, -14)
 scale = Vector2(0.5716913, 0.58852464)
 sprite_frames = SubResource("SpriteFrames_pc3i1")
 animation = &"Idle"
+
+[node name="Step" type="AudioStreamPlayer2D" parent="." unique_id=11365136]
+unique_name_in_owner = true
+stream = ExtResource("15_606se")

@@ -478,7 +478,7 @@ offset_left = 20992.105
 offset_top = 19176.316
 offset_right = 23164.105
 offset_bottom = 19330.316
-text = "Hungry... need some pumpkin seeds"
+text = "Hungry... need some white seeds"
 label_settings = SubResource("LabelSettings_4fg7c")
 horizontal_alignment = 2
 
@@ -560,15 +560,18 @@ label_settings = SubResource("LabelSettings_hc8u7")
 [node name="Timer" type="Timer" parent="." unique_id=1180803300]
 
 [node name="Pumpkin2" type="Sprite2D" parent="." unique_id=1986712305]
+modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
 position = Vector2(-6002, 161)
 texture = ExtResource("17_4vwy3")
 
 [node name="Pumpkin3" type="Sprite2D" parent="." unique_id=864233085]
+modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
 position = Vector2(-5772.0005, 256)
 scale = Vector2(0.56643355, 0.5825688)
 texture = ExtResource("17_4vwy3")
 
 [node name="Pumpkin4" type="Sprite2D" parent="." unique_id=412414053]
+modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
 position = Vector2(-6354, 202)
 scale = Vector2(0.756993, 0.77522933)
 texture = ExtResource("17_4vwy3")
