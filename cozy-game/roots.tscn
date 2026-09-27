@@ -535,7 +535,7 @@ scale = Vector2(0.5477985, 0.37328765)
 texture = ExtResource("17_4vwy3")
 
 [node name="Pumpkin2" type="Sprite2D" parent="Pumpkin" unique_id=1213425208]
-position = Vector2(214.64172, 140.91614)
+position = Vector2(214.6416, 150.87048)
 scale = Vector2(0.22094408, 0.34560502)
 texture = ExtResource("17_4vwy3")
 
