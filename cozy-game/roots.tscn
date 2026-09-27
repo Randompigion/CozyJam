@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://do8u3idhgjvev" path="res://Leaves.png" id="3_7e0xe"]
 [ext_resource type="Texture2D" uid="uid://cflrpf3v8cxi3" path="res://NewDirt.png" id="3_mepkn"]
 [ext_resource type="Texture2D" uid="uid://dg4sielrm7wjl" path="res://Background2.png" id="5_vnr4y"]
+[ext_resource type="Texture2D" uid="uid://b8nboj1rwp6dw" path="res://PilesOfLeaves.png" id="7_vnr4y"]
 [ext_resource type="Script" uid="uid://5xyojf2v6hry" path="res://player.gd" id="8_thv5f"]
 [ext_resource type="Texture2D" uid="uid://cdmasu3q0cl58" path="res://Assets/Beetle.png" id="9_7e0xe"]
 [ext_resource type="Texture2D" uid="uid://cxsr1tcxyirkd" path="res://Assets/Beetle2.png" id="10_vnr4y"]
@@ -151,15 +152,6 @@ outline_color = Color(0, 0, 0, 1)
 [node name="Roots" type="Node2D" unique_id=771176163]
 script = ExtResource("1_walqb")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1270478562]
-position = Vector2(100, -15000)
-scale = Vector2(38.585, 38.585)
-amount = 100
-texture = ExtResource("3_7e0xe")
-lifetime = 5.0
-visibility_rect = Rect2(-332.475, -198.66, 1000, 450)
-process_material = SubResource("ParticleProcessMaterial_4ayxd")
-
 [node name="NewDirt" type="Sprite2D" parent="." unique_id=530509281]
 position = Vector2(4384, 15060)
 scale = Vector2(84.795, 84.795)
@@ -185,6 +177,15 @@ rotation = 1.5707964
 scale = Vector2(0.087449625, 0.07356621)
 texture = ExtResource("20_hc8u7")
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Map" unique_id=1270478562]
+position = Vector2(100, -15000)
+scale = Vector2(38.585, 38.585)
+amount = 100
+texture = ExtResource("3_7e0xe")
+lifetime = 5.0
+visibility_rect = Rect2(-332.475, -198.66, 1000, 450)
+process_material = SubResource("ParticleProcessMaterial_4ayxd")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="Map" unique_id=1149870336]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/StaticBody2D" unique_id=1397882393]
@@ -206,6 +207,50 @@ polygon = PackedVector2Array(8293, -2177, 8367, -2151, 8529, -2149, 8701, -2238,
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Map/StaticBody2D" unique_id=1486080544]
 position = Vector2(-91, 0)
 polygon = PackedVector2Array(8552, -2692, 8639, -2661, 8934, -2615, 9023, -2658, 9058, -2738, 9053, -2896, 9000, -2943, 8628, -2921, 8454, -2800, 8492, -2727)
+
+[node name="Pumpkin" type="Sprite2D" parent="Map" unique_id=1233664550]
+position = Vector2(10445.5, 1393.5)
+scale = Vector2(0.5332168, 0.4885321)
+texture = ExtResource("17_4vwy3")
+
+[node name="Pumpkin2" type="Sprite2D" parent="Map" unique_id=1642590575]
+position = Vector2(-4078, -6562)
+scale = Vector2(0.5699301, 0.61926603)
+texture = ExtResource("17_4vwy3")
+
+[node name="Pumpkin3" type="Sprite2D" parent="Map" unique_id=1417751988]
+position = Vector2(2854.75, -11225.75)
+scale = Vector2(0.306818, 0.2580305)
+texture = ExtResource("17_4vwy3")
+
+[node name="Pumpkin4" type="Sprite2D" parent="Map" unique_id=1558618351]
+position = Vector2(2754, -11234)
+scale = Vector2(0.28146854, 0.36926606)
+texture = ExtResource("17_4vwy3")
+
+[node name="Pumpkin5" type="Sprite2D" parent="Map" unique_id=269996233]
+position = Vector2(13630, -507)
+scale = Vector2(0.6381119, 0.38990825)
+texture = ExtResource("17_4vwy3")
+
+[node name="Pumpkin6" type="Sprite2D" parent="Map" unique_id=1091194516]
+position = Vector2(492, -16914)
+texture = ExtResource("17_4vwy3")
+
+[node name="Pumpkin7" type="Sprite2D" parent="Map" unique_id=2126012509]
+position = Vector2(734, -16773)
+scale = Vector2(0.47902098, 0.4174312)
+texture = ExtResource("17_4vwy3")
+
+[node name="Pumpkin8" type="Sprite2D" parent="Map" unique_id=1390461338]
+position = Vector2(347, -16813)
+scale = Vector2(0.47027972, 0.5711009)
+texture = ExtResource("17_4vwy3")
+
+[node name="PilesOfLeaves" type="Sprite2D" parent="Map" unique_id=1801712551]
+position = Vector2(11137, -832)
+scale = Vector2(2.0280528, 1.4393204)
+texture = ExtResource("7_vnr4y")
 
 [node name="Player" type="Node2D" parent="." unique_id=713240571]
 z_index = 999
@@ -503,6 +548,41 @@ Please help me find them...
 label_settings = SubResource("LabelSettings_hc8u7")
 
 [node name="Timer" type="Timer" parent="." unique_id=1180803300]
+
+[node name="Pumpkin2" type="Sprite2D" parent="." unique_id=1986712305]
+position = Vector2(-6002, 161)
+texture = ExtResource("17_4vwy3")
+
+[node name="Pumpkin3" type="Sprite2D" parent="." unique_id=864233085]
+position = Vector2(-5772.0005, 256)
+scale = Vector2(0.56643355, 0.5825688)
+texture = ExtResource("17_4vwy3")
+
+[node name="Pumpkin4" type="Sprite2D" parent="." unique_id=412414053]
+position = Vector2(-6354, 202)
+scale = Vector2(0.756993, 0.77522933)
+texture = ExtResource("17_4vwy3")
+
+[node name="PilesOfLeaves" type="Sprite2D" parent="." unique_id=732150937]
+position = Vector2(12505, -3604)
+texture = ExtResource("7_vnr4y")
+
+[node name="PilesOfLeaves2" type="Sprite2D" parent="." unique_id=1695930175]
+position = Vector2(8311, -5094)
+texture = ExtResource("7_vnr4y")
+
+[node name="PilesOfLeaves3" type="Sprite2D" parent="." unique_id=1231747304]
+position = Vector2(-861, -4344)
+texture = ExtResource("7_vnr4y")
+
+[node name="PilesOfLeaves4" type="Sprite2D" parent="." unique_id=1060912929]
+position = Vector2(3789, -13143)
+texture = ExtResource("7_vnr4y")
+
+[node name="PilesOfLeaves5" type="Sprite2D" parent="." unique_id=930114787]
+position = Vector2(3457, -16151.999)
+scale = Vector2(1.2689769, 1.1237864)
+texture = ExtResource("7_vnr4y")
 
 [connection signal="body_entered" from="Plushie/Area2D" to="Plushie" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Plushie/Area2D" to="Plushie" method="_on_area_2d_body_exited"]
