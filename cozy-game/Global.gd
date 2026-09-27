@@ -4,6 +4,7 @@ extends Node
 var children = 0
 var inventory: Array = []
 var large_baby_6_fed: bool = false
+var baby_given_plushie: bool = false
 
 var interacting_with: String = ""
 
