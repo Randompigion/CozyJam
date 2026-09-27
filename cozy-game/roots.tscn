@@ -114,11 +114,7 @@ font = ExtResource("12_x2jg2")
 font_size = 159
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7w5kx"]
-<<<<<<< Updated upstream
-size = Vector2(27.80011, 37.7334)
-=======
 size = Vector2(27.80011, 20)
->>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vnr4y"]
 size = Vector2(455, 202)
