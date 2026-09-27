@@ -35,6 +35,9 @@
 [ext_resource type="Texture2D" uid="uid://bjoujmt86usnr" path="res://Assets/pumpkin_seeds.png" id="30_7e0xe"]
 [ext_resource type="Script" uid="uid://61k1825aojhb" path="res://pumpkin_seeds.gd" id="30_vnr4y"]
 [ext_resource type="Texture2D" uid="uid://xudhw6iqh152" path="res://NewMommaBeetle.png" id="32_vnr4y"]
+[ext_resource type="AudioStream" uid="uid://bulcjry7537yp" path="res://Assets/sfx_timer_up.wav" id="36_x6uth"]
+[ext_resource type="AudioStream" uid="uid://c5e5wxl6a5vtl" path="res://Assets/sfx_timer_down.wav" id="37_gj7nr"]
+[ext_resource type="AudioStream" uid="uid://d3k8sxhb63qsm" path="res://Assets/sfx_ability_activate.wav" id="38_xqky6"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4ayxd"]
 particle_flag_disable_z = true
@@ -596,6 +599,15 @@ texture = ExtResource("7_vnr4y")
 position = Vector2(3457, -16151.999)
 scale = Vector2(1.2689769, 1.1237864)
 texture = ExtResource("7_vnr4y")
+
+[node name="SfxTimerUp" type="AudioStreamPlayer" parent="." unique_id=2127363442]
+stream = ExtResource("36_x6uth")
+
+[node name="SfxTimerDown" type="AudioStreamPlayer" parent="." unique_id=255527993]
+stream = ExtResource("37_gj7nr")
+
+[node name="SfxAbilityActivate" type="AudioStreamPlayer" parent="." unique_id=881156607]
+stream = ExtResource("38_xqky6")
 
 [connection signal="body_entered" from="Plushie/Area2D" to="Plushie" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Plushie/Area2D" to="Plushie" method="_on_area_2d_body_exited"]
